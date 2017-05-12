@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <main>
+        <form id="form" method="get" action="#">
+            <fieldset>
+                <label for="title">Element:</label>
+                <input id="title" type="text">
+            </fieldset>
+            <fieldset>
+                <label for="comment">Content:</label>
+                <input id="comment" type="text">
+            </fieldset>
+            <input id="submit" type="submit">
+    </main>
+
+    <footer id="list">
+        <h2>Created</h2>
+    </footer>
+
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function(e, a) {
+            let list = document.querySelector("#list");
+            a = document.querySelector("#title").value;
+            let cr = document.createElement(a);
+            let content = document.querySelector("#comment");
+            cr.textContent = content.value;
+            list.appendChild(cr);
+            console.log(cr);
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>
