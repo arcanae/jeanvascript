@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pulse</title>
+</head>
+
+<body>
+    <style>
+        @keyframes green {
+            0% {
+                background-color: default;
+            }
+            50% {
+                background-color: green;
+            }
+            100% {
+                background-color: default;
+            }
+        }
+        
+        @keyframes red {
+            0% {
+                background-color: default;
+            }
+            50% {
+                background-color: red;
+            }
+            100% {
+                background-color: default;
+                animation: none 1s;
+            }
+        }
+    </style>
+
+    <input type="text">
+    <button id="click">Click</button>
+
+    <script>
+        let button = document.querySelector("#click")
+        let val = document.querySelector("input");
+        button.addEventListener("click", function() {
+            if (val.value == "") {
+                button.style.animationName = "red";
+                button.style.animationDuration = "1s";
+                button.addEventListener("animationend", function() {
+                    button.style.animationName = "";
+                });
+            } else {
+                button.style.animationName = "green";
+                button.style.animationDuration = "1s";
+                button.addEventListener("animationend", function() {
+                    button.style.animationName = "";
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
