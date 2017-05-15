@@ -11,14 +11,20 @@
 <body>
     <script>
         let myLet = "";
+        let array1 = [];
         while (myLet != "something") {
-            myLet = prompt("Say something:");
+            myLet = prompt("Say something:  " + "You said: " + array1);
+            array1.push(myLet);
         }
-
         //while (prompt("Say something") != "something");
+
+
+
         let x = "";
+        let array2 = [];
         while (x != "4") {
-            x = prompt("2+2= ?");
+            x = prompt("2+2= ?  " + "You said: " + array2);
+            array2.push(x);
         }
     </script>
 </body>
