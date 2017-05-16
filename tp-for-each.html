@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tp-forEach</title>
+</head>
+
+<body>
+    <input id="key" type="text">
+    <input id="val" type="text">
+    <button id="click">Click</button>
+    <script>
+        let object = {};
+        let button = document.querySelector("#click");
+        button.addEventListener("click", function() {
+            let key = document.querySelector("#key");
+            let val = document.querySelector("#val");
+            if (object.hasOwnProperty(key.value)) {
+                object[key.value].push(val.value);
+            } else {
+                object[key.value] = [val.value];
+
+            }
+            for (let a in object) {
+                console.log(a + ": " + object[a])
+            }
+        });
+    </script>
+</body>
+
+</html>
