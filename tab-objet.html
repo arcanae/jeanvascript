@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tab-objet</title>
+</head>
+
+<body>
+    <script>
+        let tables = [{
+            num: "1",
+            place: "6",
+            app: [{
+                Nom: "Emmanuel",
+                Sexe: "Homme"
+            }, {
+                Nom: "Virginie",
+                Sexe: "Femme"
+            }, {
+                Nom: "Apdil",
+                Sexe: "Homme"
+            }, {
+                Nom: "Marlene",
+                Sexe: "Femme"
+            }, {
+                Nom: "Remy",
+                Sexe: "Homme"
+            }, {
+                Nom: "Sebastien",
+                Sexe: "Homme"
+            }]
+        }, {
+            num: "2",
+            place: "6",
+            app: [{
+                Nom: "Thomas",
+                Sexe: "Homme"
+            }, {
+                Nom: "Julien",
+                Sexe: "Homme"
+            }, {
+                Nom: "Manon",
+                Sexe: "Femme"
+            }, {
+                Nom: "Hayet",
+                Sexe: "Femme"
+            }, {
+                Nom: "Clemence",
+                Sexe: "Femme"
+            }, {
+                Nom: "Kadyi",
+                Sexe: "Femme"
+            }]
+
+        }, {
+            num: "3",
+            place: "5",
+            app: [{
+                Nom: "Evan",
+                Sexe: "Homme"
+            }, {
+                Nom: "Sylvain",
+                Sexe: "Homme"
+            }, {
+                Nom: "Audrey",
+                Sexe: "Femme"
+            }, {
+                Nom: "Selma",
+                Sexe: "Femme"
+            }, {
+                Nom: "Yamina",
+                Sexe: "Femme"
+            }]
+
+        }, {
+            num: "4",
+            place: "6",
+            app: [{
+                Nom: "Djaafar",
+                Sexe: "Homme"
+            }, {
+                Nom: "Yannis",
+                Sexe: "Homme"
+            }, {
+                Nom: "Valentin",
+                Sexe: "Homme"
+            }, {
+                Nom: "Justin",
+                Sexe: "Homme"
+            }, {
+                Nom: "Cyrille",
+                Sexe: "Homme"
+            }, {
+                Nom: "Maelle",
+                Sexe: "Femme"
+            }]
+        }];
+
+        for (let i = 0; i < tables.length; i++) {
+            console.log("La table n°" + tables[i].num + " a " + tables[i].place + " apprenants" + "\nLeurs noms sont: ")
+            for (let j = 0; j < tables[i].app.length; j++) {
+                console.log(tables[i].app[j].Nom);
+            }
+        }
+    </script>
+</body>
+
+</html>
