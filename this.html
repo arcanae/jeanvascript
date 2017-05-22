@@ -9,7 +9,11 @@
 </head>
 
 <body>
+    <button id="green">Green</button>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
     <script>
+        // Intro This
         let chien = {
             nom: "rex",
             race: "caniche",
@@ -19,11 +23,34 @@
             présentation: pres
         }
 
+        let personne = {
+            nom: "Du Moulin",
+            prénom: "Roger",
+            parler: function() {
+                alert("je parle");
+            },
+            présentation: pres
+        }
+
+
         function pres() {
-            for (let i in chien) {
-                console.log(i + ": " + chien[i]);
+            for (let i in this) {
+                console.log(i + ": " + this[i]);
             }
         }
+
+        // Exo buttons
+
+        function changeColor() {
+            this.style.backgroundColor = this.textContent;
+        }
+
+        let green = document.querySelector("#green");
+        green.addEventListener("click", changeColor);
+        let red = document.querySelector("#red");
+        red.addEventListener("click", changeColor);
+        let blue = document.querySelector("#blue");
+        blue.addEventListener("click", changeColor);
     </script>
 </body>
 
